@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mMW-Bv-2kr">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Ix4-05-QIe">
+            <objects>
+                <viewController id="bUN-WZ-sPP" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QWJ-JA-FPg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="owj-MV-qWI">
+                                <rect key="frame" x="100" y="324" width="214" height="248"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ytk-V2-KvS">
+                                        <rect key="frame" x="0.0" y="0.0" width="214" height="120"/>
+                                        <fontDescription key="fontDescription" name="HiraginoSans-W7" family="Hiragino Sans" pointSize="20"/>
+                                        <state key="normal" title="Play" backgroundImage="clash_button">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="mMW-Bv-2kr" kind="presentation" identifier="menuToGameID" modalPresentationStyle="fullScreen" id="v0i-oZ-Fqr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ndx-Ks-HFY">
+                                        <rect key="frame" x="0.0" y="128" width="214" height="120"/>
+                                        <fontDescription key="fontDescription" name="HiraginoSans-W7" family="Hiragino Sans" pointSize="20"/>
+                                        <state key="normal" title="Top Scores" backgroundImage="clash_button">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="OoZ-w3-EiJ"/>
+                        <color key="backgroundColor" systemColor="linkColor"/>
+                        <constraints>
+                            <constraint firstItem="OoZ-w3-EiJ" firstAttribute="trailing" secondItem="owj-MV-qWI" secondAttribute="trailing" constant="100" id="7xD-RZ-z87"/>
+                            <constraint firstItem="owj-MV-qWI" firstAttribute="top" secondItem="OoZ-w3-EiJ" secondAttribute="top" constant="280" id="8Tx-gd-jCG"/>
+                            <constraint firstItem="OoZ-w3-EiJ" firstAttribute="bottom" secondItem="owj-MV-qWI" secondAttribute="bottom" constant="290" id="AFz-Ei-qaT"/>
+                            <constraint firstItem="owj-MV-qWI" firstAttribute="centerX" secondItem="QWJ-JA-FPg" secondAttribute="centerX" id="R7x-WG-KGy"/>
+                            <constraint firstItem="owj-MV-qWI" firstAttribute="centerY" secondItem="QWJ-JA-FPg" secondAttribute="centerY" id="bOc-os-bVj"/>
+                            <constraint firstItem="owj-MV-qWI" firstAttribute="leading" secondItem="OoZ-w3-EiJ" secondAttribute="leading" constant="100" id="vmp-Ky-ihY"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZHE-IU-tm0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2011" y="107"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5IO-Qc-0RA">
+            <objects>
+                <viewController id="mMW-Bv-2kr" customClass="ViewController" customModule="Memeory_Game" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uRY-Er-par">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xqW-Kx-zPF">
+                                <rect key="frame" x="113.5" y="742" width="187" height="120"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W7" family="Hiragino Sans" pointSize="20"/>
+                                <state key="normal" title="Exit" backgroundImage="clash_button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="exit" destination="mMW-Bv-2kr" eventType="touchUpInside" id="iMI-ts-9bC"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="bottom" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="KRT-f8-aqg">
+                                <rect key="frame" x="0.0" y="44" width="414" height="79"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="jZb-hw-sjT">
+                                        <rect key="frame" x="0.0" y="0.0" width="192" height="79"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kph-lZ-4DB">
+                                                <rect key="frame" x="0.0" y="0.0" width="192" height="26.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ims-A1-vEE">
+                                                <rect key="frame" x="0.0" y="28.5" width="192" height="50.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="evj-NU-Kzv">
+                                        <rect key="frame" x="222" y="0.0" width="192" height="79"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tries:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWk-vR-uc8">
+                                                <rect key="frame" x="70.5" y="0.0" width="51" height="26.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4n2-24-Hrp">
+                                                <rect key="frame" x="83" y="28.5" width="26" height="50.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lPi-TP-hgz">
+                                <rect key="frame" x="16" y="193" width="382" height="490"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7MN-A9-V6i">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="90"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vU-fy-XgG">
+                                                <rect key="frame" x="0.0" y="0.0" width="88" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="9Cr-Bt-xDP"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="dog_wallpaper"/>
+                                                <connections>
+                                                    <action selector="newRoundWithSender:" destination="mMW-Bv-2kr" eventType="touchUpInside" id="6oc-3y-CBJ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y61-O0-3W6">
+                                                <rect key="frame" x="98" y="0.0" width="88" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="u3y-mE-Pq6"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="dog_wallpaper"/>
+                                                <connections>
+                                                    <action selector="newRoundWithSender:" destination="mMW-Bv-2kr" eventType="touchUpInside" id="ugg-ZA-hSo"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1q5-Gf-hVc">
+                                                <rect key="frame" x="196" y="0.0" width="88" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="iRM-dy-7fC"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="dog_wallpaper"/>
+                                                <connections>
+                                                    <action selector="newRoundWithSender:" destination="mMW-Bv-2kr" eventType="touchUpInside" id="3aI-ML-Imx"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="93u-dl-7cR">
+                                                <rect key="frame" x="294" y="0.0" width="88" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="IjJ-VS-3e7"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="dog_wallpaper"/>
+                                                <connections>
+                                                    <action selector="newRoundWithSender:" destination="mMW-Bv-2kr" eventType="touchUpInside" id="xFp-fh-Vrn"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JZM-mR-fqv">
+                                        <rect key="frame" x="0.0" y="100" width="382" height="90"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QmR-w5-eue">
+                                                <rect key="frame" x="0.0" y="0.0" width="88" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="3Ap-3h-Amy"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="dog_wallpaper"/>
+                                                <connections>
+                                                    <action selector="newRoundWithSender:" destination="mMW-Bv-2kr" eventType="touchUpInside" id="fHR-wj-ILH"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5o1-Tq-96f">
+                                                <rect key="frame" x="98" y="0.0" width="88" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="cRg-Za-Btm"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="dog_wallpaper"/>
+                                                <connections>
+                                                    <action selector="newRoundWithSender:" destination="mMW-Bv-2kr" eventType="touchUpInside" id="d4k-2I-lxP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Cw-qx-6yv">
+                                                <rect key="frame" x="196" y="0.0" width="88" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="kkN-gE-ITr"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="dog_wallpaper"/>
+                                                <connections>
+                                                    <action selector="newRoundWithSender:" destination="mMW-Bv-2kr" eventType="touchUpInside" id="EfO-WT-fwP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KzL-WK-lGX">
+                                                <rect key="frame" x="294" y="0.0" width="88" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="10E-cb-jvz"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="dog_wallpaper"/>
+                                                <connections>
+                                                    <action selector="newRoundWithSender:" destination="mMW-Bv-2kr" eventType="touchUpInside" id="9ZU-C8-qcd"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="DAc-JO-bXy">
+                                        <rect key="frame" x="0.0" y="200" width="382" height="90"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Joe-ZR-F1w">
+                                                <rect key="frame" x="0.0" y="0.0" width="88" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="DIf-B1-MPO"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="dog_wallpaper"/>
+                                                <connections>
+                                                    <action selector="newRoundWithSender:" destination="mMW-Bv-2kr" eventType="touchUpInside" id="odI-FE-GaG"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBm-xY-2fp">
+                                                <rect key="frame" x="98" y="0.0" width="88" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="SfE-Fa-riA"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="dog_wallpaper"/>
+                                                <connections>
+                                                    <action selector="newRoundWithSender:" destination="mMW-Bv-2kr" eventType="touchUpInside" id="Pct-1D-XGE"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VE2-eI-6fD">
+                                                <rect key="frame" x="196" y="0.0" width="88" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="s55-QP-MrV"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="dog_wallpaper"/>
+                                                <connections>
+                                                    <action selector="newRoundWithSender:" destination="mMW-Bv-2kr" eventType="touchUpInside" id="bxg-L1-Oth"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZtT-Fq-hLE">
+                                                <rect key="frame" x="294" y="0.0" width="88" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="cDJ-l8-V5O"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="dog_wallpaper"/>
+                                                <connections>
+                                                    <action selector="newRoundWithSender:" destination="mMW-Bv-2kr" eventType="touchUpInside" id="vak-91-uRy"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4SQ-RF-PO6">
+                                        <rect key="frame" x="0.0" y="300" width="382" height="90"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4nt-3j-518">
+                                                <rect key="frame" x="0.0" y="0.0" width="88" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="Nbw-04-6vw"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="dog_wallpaper"/>
+                                                <connections>
+                                                    <action selector="newRoundWithSender:" destination="mMW-Bv-2kr" eventType="touchUpInside" id="TkV-NB-adz"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kxx-e5-qiW">
+                                                <rect key="frame" x="98" y="0.0" width="88" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="shi-RM-vrd"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="dog_wallpaper"/>
+                                                <connections>
+                                                    <action selector="newRoundWithSender:" destination="mMW-Bv-2kr" eventType="touchUpInside" id="eQA-dz-EXW"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WTa-x8-pqF">
+                                                <rect key="frame" x="196" y="0.0" width="88" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="Ej2-PC-GLE"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="dog_wallpaper"/>
+                                                <connections>
+                                                    <action selector="newRoundWithSender:" destination="mMW-Bv-2kr" eventType="touchUpInside" id="fYX-o7-6Iz"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="32Z-XO-oqX">
+                                                <rect key="frame" x="294" y="0.0" width="88" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="bsZ-IZ-D2q"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="dog_wallpaper"/>
+                                                <connections>
+                                                    <action selector="newRoundWithSender:" destination="mMW-Bv-2kr" eventType="touchUpInside" id="Egg-dM-sRc"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="TZj-Qt-hZU">
+                                        <rect key="frame" x="0.0" y="400" width="382" height="90"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jfq-Nz-EL0">
+                                                <rect key="frame" x="0.0" y="0.0" width="88" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="f7L-rS-o3C"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="dog_wallpaper"/>
+                                                <connections>
+                                                    <action selector="newRoundWithSender:" destination="mMW-Bv-2kr" eventType="touchUpInside" id="wgn-IA-HMI"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgZ-Vx-OZe">
+                                                <rect key="frame" x="98" y="0.0" width="88" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="LU6-KA-lZ4"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="dog_wallpaper"/>
+                                                <connections>
+                                                    <action selector="newRoundWithSender:" destination="mMW-Bv-2kr" eventType="touchUpInside" id="z4u-oR-4Kb"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="19" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aux-De-Jad">
+                                                <rect key="frame" x="196" y="0.0" width="88" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="Fck-kw-QEb"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="dog_wallpaper"/>
+                                                <connections>
+                                                    <action selector="newRoundWithSender:" destination="mMW-Bv-2kr" eventType="touchUpInside" id="oAC-mS-VN6"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LRu-zS-KOJ">
+                                                <rect key="frame" x="294" y="0.0" width="88" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="IiT-7Z-DUx"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="dog_wallpaper"/>
+                                                <connections>
+                                                    <action selector="newRoundWithSender:" destination="mMW-Bv-2kr" eventType="touchUpInside" id="Jiv-Ha-bIY"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="JZM-mR-fqv" firstAttribute="leading" secondItem="lPi-TP-hgz" secondAttribute="leading" id="0DF-si-4Wi"/>
+                                    <constraint firstItem="4SQ-RF-PO6" firstAttribute="leading" secondItem="lPi-TP-hgz" secondAttribute="leading" id="1K0-tm-gkL"/>
+                                    <constraint firstAttribute="trailing" secondItem="TZj-Qt-hZU" secondAttribute="trailing" id="33f-50-xcB"/>
+                                    <constraint firstAttribute="trailing" secondItem="7MN-A9-V6i" secondAttribute="trailing" id="IIl-mk-TJg"/>
+                                    <constraint firstAttribute="trailing" secondItem="4SQ-RF-PO6" secondAttribute="trailing" id="RgT-Tb-okC"/>
+                                    <constraint firstAttribute="trailing" secondItem="DAc-JO-bXy" secondAttribute="trailing" id="eN9-9c-vra"/>
+                                    <constraint firstItem="TZj-Qt-hZU" firstAttribute="leading" secondItem="lPi-TP-hgz" secondAttribute="leading" id="hwW-DC-DbB"/>
+                                    <constraint firstAttribute="trailing" secondItem="JZM-mR-fqv" secondAttribute="trailing" id="iJD-VM-miQ"/>
+                                    <constraint firstItem="7MN-A9-V6i" firstAttribute="leading" secondItem="lPi-TP-hgz" secondAttribute="leading" id="nRt-oA-L68"/>
+                                    <constraint firstItem="DAc-JO-bXy" firstAttribute="leading" secondItem="lPi-TP-hgz" secondAttribute="leading" id="wDE-AE-eCk"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="l31-h6-xOr"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <constraints>
+                            <constraint firstItem="lPi-TP-hgz" firstAttribute="top" secondItem="KRT-f8-aqg" secondAttribute="bottom" constant="70" id="Hzo-eg-2GE"/>
+                            <constraint firstItem="xqW-Kx-zPF" firstAttribute="centerX" secondItem="uRY-Er-par" secondAttribute="centerX" id="NhP-W1-IIE"/>
+                            <constraint firstItem="xqW-Kx-zPF" firstAttribute="leading" secondItem="l31-h6-xOr" secondAttribute="leading" constant="113.32162458836456" id="T0v-2R-XBZ"/>
+                            <constraint firstItem="l31-h6-xOr" firstAttribute="trailing" secondItem="KRT-f8-aqg" secondAttribute="trailing" id="UFX-OY-Xsd"/>
+                            <constraint firstItem="KRT-f8-aqg" firstAttribute="leading" secondItem="l31-h6-xOr" secondAttribute="leading" id="dq1-WV-LF1"/>
+                            <constraint firstItem="lPi-TP-hgz" firstAttribute="leading" secondItem="l31-h6-xOr" secondAttribute="leading" constant="16" id="eix-Jg-XJc"/>
+                            <constraint firstItem="l31-h6-xOr" firstAttribute="trailing" secondItem="lPi-TP-hgz" secondAttribute="trailing" constant="16" id="mjF-U1-XFJ"/>
+                            <constraint firstItem="KRT-f8-aqg" firstAttribute="top" secondItem="l31-h6-xOr" secondAttribute="top" id="t5r-nf-rLH"/>
+                            <constraint firstItem="xqW-Kx-zPF" firstAttribute="bottom" secondItem="l31-h6-xOr" secondAttribute="bottom" id="xJp-lU-hwa"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="29A-1L-thQ"/>
+                    <connections>
+                        <outlet property="timeLabel" destination="Ims-A1-vEE" id="X7j-I6-IWe"/>
+                        <outlet property="triesLabel" destination="4n2-24-Hrp" id="MVw-Ep-f9g"/>
+                        <outletCollection property="allButtons" destination="6vU-fy-XgG" collectionClass="NSMutableArray" id="19l-lT-IxE"/>
+                        <outletCollection property="allButtons" destination="y61-O0-3W6" collectionClass="NSMutableArray" id="veu-UP-5v4"/>
+                        <outletCollection property="allButtons" destination="1q5-Gf-hVc" collectionClass="NSMutableArray" id="hUM-Db-8ma"/>
+                        <outletCollection property="allButtons" destination="93u-dl-7cR" collectionClass="NSMutableArray" id="jJK-Hn-jLH"/>
+                        <outletCollection property="allButtons" destination="QmR-w5-eue" collectionClass="NSMutableArray" id="bg4-Zb-78J"/>
+                        <outletCollection property="allButtons" destination="5o1-Tq-96f" collectionClass="NSMutableArray" id="HPD-fe-EXh"/>
+                        <outletCollection property="allButtons" destination="1Cw-qx-6yv" collectionClass="NSMutableArray" id="uo1-1E-pcG"/>
+                        <outletCollection property="allButtons" destination="KzL-WK-lGX" collectionClass="NSMutableArray" id="94k-zG-ECb"/>
+                        <outletCollection property="allButtons" destination="Joe-ZR-F1w" collectionClass="NSMutableArray" id="map-92-yXi"/>
+                        <outletCollection property="allButtons" destination="OBm-xY-2fp" collectionClass="NSMutableArray" id="vre-VR-z8m"/>
+                        <outletCollection property="allButtons" destination="VE2-eI-6fD" collectionClass="NSMutableArray" id="6Kw-wN-hfG"/>
+                        <outletCollection property="allButtons" destination="ZtT-Fq-hLE" collectionClass="NSMutableArray" id="MbZ-Uq-hhQ"/>
+                        <outletCollection property="allButtons" destination="4nt-3j-518" collectionClass="NSMutableArray" id="vJF-Hm-IdU"/>
+                        <outletCollection property="allButtons" destination="Kxx-e5-qiW" collectionClass="NSMutableArray" id="gpB-Uw-mAz"/>
+                        <outletCollection property="allButtons" destination="WTa-x8-pqF" collectionClass="NSMutableArray" id="h8y-cK-fXO"/>
+                        <outletCollection property="allButtons" destination="32Z-XO-oqX" collectionClass="NSMutableArray" id="Osf-Gt-M5M"/>
+                        <outletCollection property="allButtons" destination="jfq-Nz-EL0" collectionClass="NSMutableArray" id="2tE-fY-uYX"/>
+                        <outletCollection property="allButtons" destination="dgZ-Vx-OZe" collectionClass="NSMutableArray" id="Fci-7a-kWD"/>
+                        <outletCollection property="allButtons" destination="aux-De-Jad" collectionClass="NSMutableArray" id="ukg-d2-3m8"/>
+                        <outletCollection property="allButtons" destination="LRu-zS-KOJ" collectionClass="NSMutableArray" id="rzW-4V-0A1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wu1-GI-Yll" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1054" y="94"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="clash_button" width="120" height="120"/>
+        <image name="dog_wallpaper" width="620" height="620"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
