@@ -13,12 +13,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet var allButtons: Array<UIButton>! // = [UIButton]?
     
+    let modeKey = "mode"
+    let stepsKey = "steps"
+
     
-    var mode:Int!               //0 for easy 4x4, 1 for hard 4x5
+    var mode:Int!                //0 for easy 4x4, 1 for hard 4x5
     var timer : Timer!
     
-    var tries = 0
-    var timeInSeconds = 0                //secs
+    var steps = 0
+    var timeInSeconds = 0        //secs
     var images:[Int]!            //array position is card position, number for image name
     
     var firstButtonTag:Int!
@@ -31,12 +34,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        mode = 0;
+        
+        readModeChosenFrom()
         
         initGameVars()   //shuffle images array array
         startTimer()
-        
-        
     }
     
     func initGameVars(){
@@ -78,7 +80,7 @@ class ViewController: UIViewController {
             let tmpButton = view.viewWithTag(firstButtonTag) as? UIButton
             
             //DELAY AFTER SECOND CARD PICK SO CARDS CAN BE SEEN
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
                 //Player chose identical cards
                 if self.firstImage == self.secondImage {
                     tmpButton?.isUserInteractionEnabled = false;
@@ -97,6 +99,7 @@ class ViewController: UIViewController {
                     //IF NO MORE CARDS LEFT TO BE FOUND, STOP THE TIMER
                     if self.cardsLeft == 0 {
                         self.stopTimer()
+                        self.choosePopUpWindowAfterGame()
                     }
                     
                 } else {
@@ -110,8 +113,8 @@ class ViewController: UIViewController {
                     tmpButton?.setBackgroundImage(UIImage(named: "dog_wallpaper.png" ), for: UIControl.State.normal)
                     sender.setBackgroundImage(UIImage(named: "dog_wallpaper.png" ), for: UIControl.State.normal)
 
-                    self.tries += 1
-                    self.triesLabel.text = String(self.tries)
+                    self.steps += 1
+                    self.triesLabel.text = String(self.steps)
                     
                 }
                 self.enableButtons()
@@ -159,17 +162,50 @@ class ViewController: UIViewController {
         }
     }
     
-    func endOfGame() {
-        //code
+    func readModeChosenFrom(){
+        let preferences = UserDefaults.standard
+
+        if preferences.object(forKey: modeKey) == nil {
+            //  Doesn't exist
+        } else {
+            mode = preferences.integer(forKey: modeKey)
+        }
     }
     
-    func playAgain() {
-        //code
+    func choosePopUpWindowAfterGame(){
+        let temp = TopTenScores()
+        if temp.checkIfScoreBroken(steps: steps) {
+            //pass steps var
+            let preferences = UserDefaults.standard
+            preferences.set(steps, forKey: stepsKey)
+            _ = preferences.synchronize()
+            
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "topScorePopupViewControllerID")
+            self.present(newViewController, animated: true, completion: nil)
+            
+        } else {
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "gameoverPopupViewControllerID")
+            self.present(newViewController, animated: true, completion: nil)
+        }
     }
     
-    @IBAction func exit() {
-        dismiss(animated: true, completion: nil)
-    }
     
-    
+//Orientation controls
+    override func viewWillAppear(_ animated: Bool) {
+       super.viewWillAppear(animated)
+       
+       AppUtility.lockOrientation(.portrait)
+       // Or to rotate and lock
+       // AppUtility.lockOrientation(.portrait, andRotateTo: .portrait)
+       
+   }
+
+   override func viewWillDisappear(_ animated: Bool) {
+       super.viewWillDisappear(animated)
+       
+       // Don't forget to reset when view is being removed
+       AppUtility.lockOrientation(.all)
+   }
 }
