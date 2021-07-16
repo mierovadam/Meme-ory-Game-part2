@@ -1,6 +1,6 @@
 # Meme-ory-Game-part2
-![Simulator Screen Shot - iPhone 12 Pro - 2021-07-16 at 14 01 53](https://user-images.githubusercontent.com/49271686/125938310-1758b337-bc52-4634-979d-07c46a5d2ff6.png)
-![Simulator Screen Shot - iPhone 12 Pro - 2021-07-16 at 14 02 11](https://user-images.githubusercontent.com/49271686/125938325-1784ce24-f30b-4f55-bac9-98a022e914fb.png)
-![Simulator Screen Shot - iPhone 12 Pro - 2021-07-16 at 14 02 46](https://user-images.githubusercontent.com/49271686/125938332-2d7938cb-bdf3-436e-ad26-f73c33903f12.png)
-![Simulator Screen Shot - iPhone 12 Pro - 2021-07-16 at 14 03 20](https://user-images.githubusercontent.com/49271686/125938342-45dd625a-18b7-4e97-af9e-526c8b3b5be5.png)
-![Simulator Screen Shot - iPhone 12 Pro - 2021-07-16 at 14 04 12](https://user-images.githubusercontent.com/49271686/125938352-cbf493ad-14e4-4440-8536-93d9f222763f.png)
+![Simulator Screen Shot - iPhone 12 Pro - 2021-07-16 at 14 01 53](https://user-images.githubusercontent.com/49271686/125938835-c36b5d3e-10e3-47ee-a239-d79e5c10bc2c.png)
+![Simulator Screen Shot - iPhone 12 Pro - 2021-07-16 at 14 02 11](https://user-images.githubusercontent.com/49271686/125938838-caafc6ca-786e-4501-adaa-466f68e36d13.png)
+![Simulator Screen Shot - iPhone 12 Pro - 2021-07-16 at 14 02 46](https://user-images.githubusercontent.com/49271686/125938841-371d27f8-8a07-4658-b609-1a5d1228a0f3.png)
+![Simulator Screen Shot - iPhone 12 Pro - 2021-07-16 at 14 03 20](https://user-images.githubusercontent.com/49271686/125938849-c1c0ebdc-2c6e-4e56-924b-fb30ca2d9878.png)
+![Simulator Screen Shot - iPhone 12 Pro - 2021-07-16 at 14 04 12](https://user-images.githubusercontent.com/49271686/125938854-24e5ec6a-8c1d-456b-85b7-3d077a0fd5aa.png)
